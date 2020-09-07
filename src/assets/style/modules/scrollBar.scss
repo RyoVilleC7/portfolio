@@ -1,0 +1,40 @@
+.scrollBar_wrap{
+    position: absolute;
+    top: calc(50% - 70px);
+    right: 0;
+
+    #scrollBar{
+        position: absolute;
+        top: 0;
+        width: 2px;
+        height: 0;
+        background-color: $main-color;
+        z-index: 5;
+    }
+
+    #scrollBar_placeholder{
+        position: absolute;
+        top: 0;
+        width: 1px;
+        height: 150px;
+        background-color: #555;
+    }
+}
+
+@include mq(md){
+    .scrollBar_wrap{
+        display: none;
+    }
+}
+
+@include mq(sm){
+    .scrollBar_wrap{
+        display: none;
+    }
+}
+
+@include mq(xs){
+    .scrollBar_wrap{
+        display: none;
+    }
+}

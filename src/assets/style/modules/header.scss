@@ -1,0 +1,87 @@
+header{
+    position: fixed;
+    z-index: 5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+    
+    //Nav
+    @import '../modules/Nav.scss';
+
+    //common
+        .header-content-wrap{
+            width: 86%;
+            height: 86%;
+            position: relative;
+    
+        .top-content-wrap{
+            width: 100%;
+            position: absolute;
+            top: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            pointer-events: none;
+    
+            h1{
+                font-size: 3rem;
+                font-weight: normal;
+                z-index: 5;
+                pointer-events: all;
+
+                a{
+                    transition: .3s;
+                }
+                
+                &:hover > a{
+                    color: $main-color !important;
+                }
+            }
+
+            @import '../modules/menuBtn.scss';
+        }
+    
+        .middle-content-wrap{
+            width: 100%;
+            height: 100%;
+            position: relative;
+            top: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            pointer-events: none;
+
+            @import '../modules/lefttext.scss';
+            @import '../modules/scrollBar.scss';
+        }
+    
+        .bottom-content-wrap{
+            width: 100%;
+            position: absolute;
+            bottom: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            pointer-events: none;
+
+            @import '../modules/lefttext.scss';
+            @import '../modules/sns.scss';
+            @import '../modules/soundbtn.scss';
+        }
+    }
+
+    @include mq(sm){
+        .header-content-wrap{
+            width: 86%;
+            height: 90%;
+        }
+    }
+
+    @include mq(xs){
+        .header-content-wrap{
+            width: 86%;
+            height: 90%;
+        }
+    }
+}

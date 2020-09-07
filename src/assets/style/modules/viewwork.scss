@@ -1,0 +1,68 @@
+//common
+.view-work {
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    user-select: none;
+    pointer-events: all;
+
+    span {
+        color: $wht;
+        pointer-events: none;
+    }
+}
+
+//xl
+@include mq(xl){
+    .view-work {
+        width: 100px;
+        height: 100px;
+        border: 2px solid $main-color;
+    
+        span {
+            font-size: 1.6rem;
+        }
+    }
+}
+
+//lg
+@include mq(lg){
+    .view-work {
+        width: 100px;
+        height: 100px;
+        border: 2px solid $main-color;
+    
+        span {
+            font-size: 1.6rem;
+        }
+    }
+}
+
+//md
+@include mq(md){
+    .view-work {
+        width: 100px;
+        height: 100px;
+        border: 2px solid $main-color;
+    
+        span {
+            font-size: 1.6rem;
+        }
+    }
+}
+
+//sm
+@include mq(sm){
+    .view-work {
+        display: none;
+    }
+}
+
+//xs
+@include mq(xs){
+    .view-work {
+        display: none;
+    }
+}

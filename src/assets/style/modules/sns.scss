@@ -1,0 +1,24 @@
+.sns-wrap {
+    display: flex;
+
+    .sns-logo {
+        width: 25px;
+        height: 25px;
+        margin-right: 25px;
+        cursor: pointer;
+        pointer-events: all;
+        z-index: 5;
+
+        &:hover {
+            color: $main-color;
+        }
+
+        &:nth-child(3) {
+            margin-right: 0;
+        }
+
+        img {
+            pointer-events: none;
+        }
+    }
+}

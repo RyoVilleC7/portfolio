@@ -1,0 +1,248 @@
+//基本設定
+@import './common/variable.scss';//変数の読み込み
+@import './common/mixin.scss';//mixinの読み込み
+@import './common/function.scss';//関数の読み込み
+@import './common/foundation.scss';//reset.cssの読み込み
+@import './common/animation.scss';//アニメーションの読み込み
+
+//スタイル設定
+
+.horizontal_border{
+    width: 100%;
+    height: 1px;
+    background-color: #707070;
+}
+
+.title_border{
+    width: 30px;
+    height: 7px;
+    background-color: $wht;
+    margin: 30px 0;
+}
+
+//noise-layer
+.noise-layer{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    opacity: .05;
+    z-index: 10001;
+    pointer-events: none;
+    background-image: url('../image//noise.gif');
+}
+
+//mouse
+.js-mouse-wrap{
+
+    #mouse{
+        width: 14px;
+        height: 14px;
+        top: -7px;
+        left: -7px;
+        background-color: $main-color;
+        position: fixed;
+        border-radius: 50%;
+        z-index: 9994;
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    #mouse_lovers{
+    pointer-events: none;
+    position: fixed;
+    border: 1px solid $wht;
+    background: transparent;
+    top: -23px;     //座標調節（カーソル位置と円の中心を合わせる）
+    left: -23px;    //座標調節（カーソル位置と円の中心を合わせる）
+    width: 46px;   //マウスストーカーの直径
+    height: 46px;  //マウスストーカーの直径
+    border-radius: 50%;
+    transition: .3s;
+    transition-timing-function: ease-out;
+    z-index: 9993;
+    pointer-events: none;
+}
+}
+
+@include mq(sm){
+    .js-mouse-wrap{
+        display: none;
+    }
+}
+
+@include mq(xs){
+    .js-mouse-wrap{
+        display: none;
+    }
+}
+
+//orientation
+@import './modules/orientation.scss';
+
+//loader
+@import './modules/loading.scss';
+
+//header
+@import './modules/header.scss';
+
+//main
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 4;
+
+    ._content{
+
+        #home{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            #textWrap,#textWrap2{
+                overflow: hidden;
+                font-weight: bold;
+
+                span{
+                    transform: translateY(110%);
+                    display: inline-block;
+                    font-size: 8rem;
+                    color: #fff;
+                }
+            }
+
+            .btn_wrapper{
+                opacity: 0;
+
+                .title_border{
+                    width: 30px;
+                    height: 7px;
+                    background-color: $wht;
+                    margin: 20px 0;
+                }
+    
+                button{
+                    border: 1px solid $main-color;
+                    border-radius: 20px;
+                    background-color: transparent;
+                    width: 150px;
+                    height: 40px;
+                    color: $wht;
+                    font-size: 1.6rem;
+                    letter-spacing: 2px;
+                    transition: .2s;
+                    outline: none;
+    
+                    &:hover{
+                        background-color: $main-color;
+                        cursor: pointer;
+                    }
+                }
+            }
+
+            
+            @include mq(xl){
+                
+                #textWrap,#textWrap2{
+                overflow: hidden;
+                white-space: nowrap;
+
+                span{
+                    transform: translateY(110%);
+                    display: inline-block;
+                    font-size: 12rem;
+                    letter-spacing: 10px;
+                    color: #fff;
+                }
+            }
+            }
+
+            @include mq(lg){
+
+                #home_inner{
+                    display: flex;
+                    justify-content: center;
+                    align-items: flex-start;
+                    flex-direction: column;
+                
+                    #textWrap,#textWrap2{
+                    overflow: hidden;
+                    white-space: nowrap;
+    
+                    span{
+                        transform: translateY(110%);
+                        display: inline-block;
+                        font-size: 9rem;
+                        letter-spacing: 10px;
+                        color: #fff;
+                    }
+                }
+            }
+            }
+
+                @include mq(md){
+
+                    #textWrap,#textWrap2{
+                        overflow: hidden;
+                        white-space: nowrap;
+        
+                        span{
+                            transform: translateY(110%);
+                            display: inline-block;
+                            font-size: 9rem;
+                            color: #fff;
+                        }
+
+                    }
+                }
+
+            @include mq(sm){
+
+                #home_inner{
+                    display: flex;
+                    justify-content: center;
+                    align-items: flex-start;
+                    flex-direction: column;
+
+                    #textWrap,#textWrap2{
+                        overflow: hidden;
+                        white-space: nowrap;
+    
+                        span{
+                            transform: translateY(110%);
+                            display: inline-block;
+                            font-size: 5.5rem;
+                            color: #fff;
+                        }
+                    }
+            }   
+            }
+
+            @include mq(xs){
+
+                #textWrap,#textWrap2{
+                    overflow: hidden;
+                    white-space: nowrap;
+    
+                    span{
+                        transform: translateY(110%);
+                        display: inline-block;
+                        font-size: 5rem;
+                        color: #fff;
+                    }
+
+                }
+            }
+        }
+
+        @import './modules/about.scss';
+    }
+}
+
+#WebGL-output{
+    position: fixed;
+    top: 0;
+}

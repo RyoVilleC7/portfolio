@@ -1,0 +1,150 @@
+.left-text-wrap {
+    display: flex;
+
+    .sidebar {
+        background-color: $main-color;
+    }
+
+    .left-main-text {
+        color: $wht;
+    }
+
+    .left-sub-text {
+        color: $grey;
+    }
+}
+
+@include mq(xl){
+    
+    .left-text-wrap {
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+
+    .sidebar {
+        width: 4px;
+        height: 30px;
+    }
+
+    span {
+        writing-mode: vertical-lr;
+        letter-spacing: 2px;
+    }
+
+    .left-main-text {
+        font-size: 1.8rem;
+        margin: 0 10px;
+    }
+
+    .left-sub-text {
+        font-size: 1.6rem;
+    }
+}
+}
+
+@include mq(lg){
+
+    .left-text-wrap {
+        flex-direction: row-reverse;
+        justify-content: flex-end;
+    
+        .sidebar {
+            width: 4px;
+            height: 30px;
+        }
+    
+        span {
+            writing-mode: vertical-lr;
+            letter-spacing: 2px;
+        }
+    
+        .left-main-text {
+            font-size: 1.8rem;
+            margin: 0 10px;
+        }
+    
+        .left-sub-text {
+            font-size: 1.6rem;
+        }
+    }
+}
+
+@include mq(md){
+
+    .left-text-wrap {
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+
+    .sidebar {
+        width: 4px;
+        height: 30px;
+    }
+
+    span {
+        writing-mode: vertical-lr;
+        letter-spacing: 2px;
+    }
+
+    .left-main-text {
+        font-size: 1.8rem;
+        margin: 0 10px;
+    }
+
+    .left-sub-text {
+        font-size: 1.6rem;
+    }
+}
+}
+
+@include mq(sm){
+    
+    .left-text-wrap {
+    flex-direction: column;
+    justify-content: flex-start;
+
+    .sidebar {
+        width: 30px;
+        height: 4px;
+    }
+
+    span {
+        letter-spacing: 2px;
+    }
+
+    .left-main-text {
+        font-size: 1.4rem;
+        margin: 8px 0;
+        line-height: 1.5em;
+    }
+
+    .left-sub-text {
+        font-size: 1.4rem;
+    }
+}
+}
+
+@include mq(xs){
+    
+    .left-text-wrap {
+    flex-direction: column;
+    justify-content: flex-start;
+
+    .sidebar {
+        width: 30px;
+        height: 4px;
+    }
+
+    span {
+        letter-spacing: 2px;
+    }
+
+    .left-main-text {
+        font-size: 1.4rem;
+        margin: 8px 0;
+        line-height: 1.5em;
+    }
+
+    .left-sub-text {
+        font-size: 1.4rem;
+    }
+}
+}

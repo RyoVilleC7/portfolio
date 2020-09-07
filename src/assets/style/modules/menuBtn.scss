@@ -1,0 +1,24 @@
+//common
+nav ul{
+    display: flex;
+
+    li a {
+        font-size: 1.6rem;
+        margin: 0 20px;
+        pointer-events: all;
+        transition: .3s;
+
+        &:hover {
+            color: $main-color;
+        }
+    }
+}
+
+@media screen and (min-width: 1025px){
+
+    .menu-btn{
+        &:hover{
+            transform: scale(0.8);
+        }    
+    }
+}

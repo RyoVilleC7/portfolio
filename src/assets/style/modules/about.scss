@@ -1,0 +1,494 @@
+#about{
+
+    //common
+    .fv_content_wrap{
+        color: $wht;
+        font-size: 5rem;
+        position: relative;
+        top: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .fv_content_wrap_inner{
+            width: 70%;
+            height: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+
+            .about_textTitleWrap{
+                z-index: 5;
+
+            h2{
+                font-size: 5rem;
+            }
+
+            h3{
+                font-size: 6.5rem;
+                white-space: nowrap;
+
+                span{
+                    color: $main-color;
+                    font-size: 6.5rem;
+                }
+            }
+                
+        }
+
+            #aboutCanvas{
+                width: 575px;
+                height: 425px;
+                position: absolute;
+                right: 0;
+                transform: rotate(5deg);
+            }
+        }
+    }
+
+    .bt_content_wrap{
+        color: $wht;
+        font-size: 5rem;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .bt_content_wrap_inner{
+            width: 70%;
+            height: 100%;
+            position: relative;
+
+            .profile_wrap{
+                display: flex;
+                padding: 100px 50px;
+
+                .l_content{
+                    width: 50%;
+                    margin-right: 50px;
+
+                    .name_wrap{
+                        letter-spacing: 2px;
+
+                            dt{
+                                font-size: 2.5rem;
+                                margin-bottom: 10px;
+                            }
+
+                            dd{
+                                font-weight: lighter;
+                                font-size: 1.6rem;
+                                color:$grey
+                            }
+                    }
+
+                    .skillSet_wrap{
+                        p{
+                            font-size: 1.8rem;
+                            letter-spacing: 1px;
+                            color: $main-color;
+                            margin-bottom: 10px;
+                        }
+                    }
+                }
+
+                .r_content{
+                    width: 50%;
+
+                    p{
+                        font-size: 1.5rem;
+                        font-weight: lighter;
+                        letter-spacing: 2px;
+                        line-height: 30px;
+                    }
+                }
+            }
+
+            .experience_wrap{
+                padding: 100px 50px;
+
+                h3{
+                    font-size: 5rem;
+                }
+
+                p{
+                    font-size: 1.5rem;
+                    font-weight: lighter;
+                    letter-spacing: 2px;
+                    line-height: 30px;
+                    margin-bottom: 50px;
+                    word-break: break-all;
+
+                    span{
+                        font-size: 1.5rem;
+                        color: $main-color;
+                        word-break: break-all;
+                    }
+                }
+                
+                button{
+                    border: 1px solid $main-color;
+                    border-radius: 20px;
+                    background-color: transparent;
+                    width: 210px;
+                    height: 40px;
+                    color: $wht;
+                    font-size: 1.6rem;
+                    letter-spacing: 2px;
+                    transition: .2s;
+                    outline: none;
+    
+                    &:hover{
+                        background-color: $main-color;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+
+    @include mq(xl){
+
+        .fv_content_wrap{
+            font-size: 5rem;
+            overflow: hidden;
+    
+            .fv_content_wrap_inner{
+                width: 70%;
+    
+                .about_textTitleWrap{
+
+                    h2{
+                        font-size: 8rem;
+                    }
+        
+                    h3{
+                        font-size: 9.5rem;
+                        white-space: nowrap;
+        
+                        span{
+                            color: $main-color;
+                            font-size: 9.5rem;
+                        }
+                    }
+                        
+                }
+    
+                #aboutCanvas{
+                    width: 575px;
+                    height: 425px;
+                    transform: translateX(-20%) rotate(5deg) scale(1.3);
+                }
+            }
+        }
+    }
+
+    //sm
+    @include mq(md){
+        
+        .fv_content_wrap{
+        font-size: 5rem;
+        overflow: hidden;
+
+        .fv_content_wrap_inner{
+            width: 86%;
+
+            .about_textTitleWrap{
+
+            h2{
+                font-size: 5.5rem;
+                letter-spacing: 5px;
+            }
+
+            h3{
+                font-size: 6.5rem;
+                white-space: normal;
+                letter-spacing: 5px;
+
+                span{
+                    color: $main-color;
+                    font-size: 6.5rem;
+                    letter-spacing: 5px;
+                }
+            }
+                
+        }
+
+            #aboutCanvas{
+                width: 575px;
+                height: 425px;
+                transform: rotate(5deg) scale(0.8);
+            }
+        }
+    }
+
+    .bt_content_wrap{
+        font-size: 5rem;
+
+        .bt_content_wrap_inner{
+            width: 86%;
+            height: 100%;
+            position: relative;
+
+            .profile_wrap{
+                flex-direction: column;
+                padding: 0;
+                margin: 50px 0;
+
+                .l_content{
+                    width: 100%;
+                    margin-bottom: 20px;
+
+                    .skillSet_wrap{
+                        p{
+                            font-size: 1.6rem;
+                            letter-spacing: 1px;
+                            line-height: 30px;
+                            margin-bottom: 10px;
+                        }
+                    }
+                }
+
+                .r_content{
+                    width: 100%;
+
+                    p{
+                        font-size: 1.5rem;
+                        font-weight: lighter;
+                        letter-spacing: 2px;
+                        line-height: 30px;
+                    }
+                }
+            }
+
+            .experience_wrap{
+                padding: 0;
+                margin: 50px 0;
+
+                h3{
+                    font-size: 3rem;
+                }
+
+                p{
+                    font-size: 1.5rem;
+                    font-weight: lighter;
+                    letter-spacing: 2px;
+                    line-height: 30px;
+                    margin-bottom: 50px;
+
+                    span{
+                        font-size: 1.5rem;
+                    }
+                }
+            }
+        }
+    }
+    }
+
+    //sm
+    @include mq(sm){
+        
+        .fv_content_wrap{
+        font-size: 5rem;
+        overflow: hidden;
+
+        .fv_content_wrap_inner{
+            width: 90%;
+
+            .about_textTitleWrap{
+
+            h2{
+                font-size: 4.5rem;
+            }
+
+            h3{
+                font-size: 5.5rem;
+                white-space: normal;
+
+                span{
+                    color: $main-color;
+                    font-size: 5.5rem;
+                }
+            }
+                
+        }
+
+            #aboutCanvas{
+                width: 575px;
+                height: 425px;
+                bottom: 10%;
+                left: -50px;
+                transform: rotate(5deg) scale(0.5);
+            }
+        }
+    }
+
+    .bt_content_wrap{
+        font-size: 5rem;
+
+        .bt_content_wrap_inner{
+            width: 90%;
+            height: 100%;
+            position: relative;
+
+            .profile_wrap{
+                flex-direction: column;
+                padding: 0;
+                margin: 50px 0;
+
+                .l_content{
+                    width: 100%;
+                    margin-bottom: 20px;
+
+                    .skillSet_wrap{
+                        p{
+                            font-size: 1.6rem;
+                            letter-spacing: 1px;
+                            line-height: 30px;
+                            margin-bottom: 10px;
+                        }
+                    }
+                }
+
+                .r_content{
+                    width: 100%;
+
+                    p{
+                        font-size: 1.5rem;
+                        font-weight: lighter;
+                        letter-spacing: 2px;
+                        line-height: 30px;
+                    }
+                }
+            }
+
+            .experience_wrap{
+                padding: 0;
+                margin: 50px 0;
+
+                h3{
+                    font-size: 3rem;
+                }
+
+                p{
+                    font-size: 1.5rem;
+                    font-weight: lighter;
+                    letter-spacing: 2px;
+                    line-height: 30px;
+                    margin-bottom: 50px;
+
+                    span{
+                        font-size: 1.5rem;
+                    }
+                }
+            }
+        }
+    }
+    }
+
+    //xs
+    @include mq(xs){
+        
+            .fv_content_wrap{
+            font-size: 5rem;
+            overflow: hidden;
+    
+            .fv_content_wrap_inner{
+                width: 90%;
+    
+                .about_textTitleWrap{
+    
+                h2{
+                    font-size: 3rem;
+                }
+    
+                h3{
+                    font-size: 4rem;
+                    white-space: normal;
+    
+                    span{
+                        color: $main-color;
+                        font-size: 4rem;
+                    }
+                }
+                    
+            }
+    
+                #aboutCanvas{
+                    width: 575px;
+                    height: 425px;
+                    bottom: 10%;
+                    left: -50px;
+                    transform: rotate(5deg) scale(0.5);
+                }
+            }
+        }
+    
+        .bt_content_wrap{
+            font-size: 5rem;
+    
+            .bt_content_wrap_inner{
+                width: 90%;
+                height: 100%;
+                position: relative;
+    
+                .profile_wrap{
+                    flex-direction: column;
+                    padding: 0;
+                    margin: 50px 0;
+    
+                    .l_content{
+                        width: 100%;
+                        margin-bottom: 20px;
+    
+                        .skillSet_wrap{
+                            p{
+                                font-size: 1.6rem;
+                                letter-spacing: 1px;
+                                line-height: 30px;
+                                margin-bottom: 10px;
+                            }
+                        }
+                    }
+    
+                    .r_content{
+                        width: 100%;
+    
+                        p{
+                            font-size: 1.4rem;
+                            font-weight: lighter;
+                            letter-spacing: 2px;
+                            line-height: 30px;
+                        }
+                    }
+                }
+    
+                .experience_wrap{
+                    padding: 0;
+                    margin: 50px 0;
+    
+                    h3{
+                        font-size: 3rem;
+                    }
+    
+                    p{
+                        font-size: 1.4rem;
+                        font-weight: lighter;
+                        letter-spacing: 2px;
+                        line-height: 30px;
+                        margin-bottom: 50px;
+    
+                        span{
+                            font-size: 1.4rem;
+                        }
+                    }
+
+                    button{
+                        font-size: 1.4rem;
+                    }
+                }
+            }
+        }
+    }
+}
