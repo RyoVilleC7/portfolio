@@ -1,0 +1,317 @@
+.fadeOut_ms{
+    animation: fadeOut_ms .3s ease forwards;
+}
+
+@keyframes fadeOut_ms{
+    0%{
+        width: 46px;
+        height: 46px;
+    }
+
+    100%{
+        width: 0px;
+        height: 0px;
+        top: 0;
+        left: 0;
+        background-color: transparent;
+        border: 0px solid $main-color;
+    }
+}
+
+.ms_animation_in{
+    animation: ms_animation_in .3s ease forwards;
+}
+
+@keyframes ms_animation_in{
+    0%{
+        background: $main-color;
+        top: -6px;     //座標調節（カーソル位置と円の中心を合わせる）
+        left: -6px;    //座標調節（カーソル位置と円の中心を合わせる）
+        width: 12px;   //マウスストーカーの直径
+        height: 12px;  //マウスストーカーの直径
+        opacity: 1;
+    }
+
+    100%{
+        border: 1px solid $main-color;
+        background: transparent;
+        top: -50px;     //座標調節（カーソル位置と円の中心を合わせる）
+        left: -50px;    //座標調節（カーソル位置と円の中心を合わせる）
+        width: 100px;   //マウスストーカーの直径
+        height: 100px;  //マウスストーカーの直径
+        opacity: 1;
+    }
+}
+
+.ms_animation_out{
+    animation: ms_animation_out .3s ease forwards;
+}
+
+@keyframes ms_animation_out{
+    0%{
+        border: 1px solid $main-color;
+        background: transparent;
+        top: -50px;     //座標調節（カーソル位置と円の中心を合わせる）
+        left: -50px;    //座標調節（カーソル位置と円の中心を合わせる）
+        width: 100px;   //マウスストーカーの直径
+        height: 100px;  //マウスストーカーの直径
+        opacity: 1;
+    }
+
+    100%{
+        background: $main-color;
+        top: -6px;     //座標調節（カーソル位置と円の中心を合わせる）
+        left: -6px;    //座標調節（カーソル位置と円の中心を合わせる）
+        width: 12px;   //マウスストーカーの直径
+        height: 12px;  //マウスストーカーの直径
+        opacity: 1;
+    }
+}
+
+.ms_window_out{
+    width: 0 !important;
+    height: 0 !important;
+    opacity: 0 !important;
+}
+
+.fadeIn{
+    animation: fadeIn .7s forwards;
+}
+
+.fadeOut{
+    animation: fadeOut .5s forwards;
+}
+
+@keyframes fadeIn {
+    0%{
+        transform: translateY(100%) skew(20deg);
+        opacity: 0;
+    }
+
+    100%{
+        transform: translateY(0%) skew(0deg);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    0%{
+        transform: translateY(0%);
+        opacity: 1;
+    }
+
+    100%{
+        transform: translateY(-30%);
+        opacity: 0;
+    }
+}
+
+.js-page-change-animation{
+    animation: pageChange .3s ease forwards;
+}
+
+@keyframes pageChange {
+    from{
+        transform: translateY(30px);
+        opacity: 0;
+    }
+
+    to{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+.js-page-change-animation-out{
+    animation: pageChange-out .3s ease forwards;
+}
+
+@keyframes pageChange-out {
+    from{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+
+    to{
+        transform: translateY(30px);
+        opacity: 0;
+    }
+}
+
+.sound-animation-on{
+    animation: sound-animation-on 1s infinite;
+}
+
+@keyframes sound-animation-on {
+    0%{
+        transform: rotate3d(0);
+    }
+
+    100%{
+        transform: rotate3d(0,1,0,180deg);
+    }
+}
+
+.textFadeIn{
+    animation: textFadeIn 0.5s 1.7s ease forwards;
+}
+
+@keyframes textFadeIn {
+    from {
+        transform: translateY(110%) skew(40deg);
+    }
+
+    to {
+        transform: translateY(0%) skew(0deg);
+    }
+}
+
+.screenOut{
+    //durationとdelayはJSに記述
+    animation: screenOut ease-in-out forwards;
+}
+
+@keyframes screenOut {
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(-100%);
+    }
+}
+
+.cv_in{
+    animation: cv_in 0.5s ease forwards;
+}
+
+@keyframes cv_in {
+    from {
+        transform: translateY(50px) scale(0.6);
+        opacity: 0;
+    }
+
+    to{
+        transform: translate3d(0,0,10px) scale(1);
+        opacity: 1;
+    }
+}
+
+.cv_out{
+    animation: cv_out 0.5s ease forwards;
+}
+
+@keyframes cv_out {
+    from {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+    }
+
+    to{
+        transform: translateY(50px) scale(0.6);
+        opacity: 0;
+    }
+}
+
+.loading-text-fadeOut{
+    
+    display: none;
+}
+
+
+
+.ss_in{
+    animation: ss_out 0.5s ease forwards;
+}
+
+@keyframes ss_out {
+    from {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.ss_out{
+    display: none;
+}
+
+.btnWrapper_fadeIn{
+    animation: btnWrapper_fadeIn 0.5s ease forwards;
+}
+
+@keyframes btnWrapper_fadeIn {
+    from {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.elemIn_left{
+    animation: elemIn_left 0.3s ease forwards;
+}
+
+@keyframes elemIn_left {
+    from {
+        transform: translateX(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.elemIn_right{
+    animation: elemIn_right 0.3s ease forwards;
+}
+
+@keyframes elemIn_right {
+    from {
+        transform: translateX(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.elemOut_left{
+    animation: elemOut_left 0.3s ease forwards;
+}
+
+@keyframes elemOut_left {
+    from {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateX(-50px);
+        opacity: 0;
+    }
+}
+
+.elemOut_right{
+    animation: elemOut_right 0.3s ease forwards;
+}
+
+@keyframes elemOut_right {
+    from {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateX(50px);
+        opacity: 0;
+    }
+}
